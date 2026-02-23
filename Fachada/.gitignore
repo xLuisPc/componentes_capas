@@ -1,0 +1,46 @@
+# Ignore files for Maven
+target/
+.m2/
+*.jar
+*.war
+*.ear
+dist/
+build/
+
+# Ignore IDE files
+.classpath
+.project
+.settings/
+*.swp
+*.swo
+*~
+.DS_Store
+.vscode/
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Ignore OS files
+Thumbs.db
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Ignore compilation output
+bin/
+out/
+*.class
+*.o
+*.so
+
+# Ignore logs
+*.log
+*.out
+
+# Ignore temporary files
+*.tmp
+*.bak
+*.backup
+~*

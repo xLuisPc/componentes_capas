@@ -1,0 +1,14 @@
+com/arquitectura/entidades/Documento.class
+com/arquitectura/gestordocumentos/RepositorioDocumentoH2.class
+com/arquitectura/sistemaclientes/RepositorioClienteMySQL.class
+com/arquitectura/persistencia/IRepositorioDocumento.class
+com/arquitectura/gestordocumentos/IDocumentoComponente.class
+com/arquitectura/entidades/Cliente.class
+com/arquitectura/sistemaclientes/ConfiguracionCliente.class
+com/arquitectura/persistencia/IRepositorioCliente.class
+com/arquitectura/sistemaclientes/RegistroCliente.class
+com/arquitectura/gestordocumentos/DocumentoHtml.class
+com/arquitectura/gestordocumentos/ComponentePDF.class
+com/arquitectura/gestordocumentos/DocumentoTexto.class
+com/arquitectura/sistemaclientes/MensajeriaCliente.class
+com/arquitectura/gestordocumentos/DocumentoPdfAdaptado.class

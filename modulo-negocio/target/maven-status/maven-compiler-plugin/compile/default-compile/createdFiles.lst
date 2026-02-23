@@ -1,0 +1,5 @@
+com/arquitectura/negocio/fachada/Fachada.class
+com/arquitectura/negocio/servicio/ServicioClientes.class
+com/arquitectura/negocio/fachada/IFachada.class
+com/arquitectura/negocio/controlador/Controlador.class
+com/arquitectura/negocio/servicio/ServicioDocumentos.class
