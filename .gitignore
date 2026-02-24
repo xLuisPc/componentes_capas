@@ -1,0 +1,72 @@
+# ══════════════════════════════════════════
+#  Maven
+# ══════════════════════════════════════════
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+
+# Maven Wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# ══════════════════════════════════════════
+#  IDEs
+# ══════════════════════════════════════════
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# NetBeans
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# VS Code / Cursor
+.vscode/
+
+# ══════════════════════════════════════════
+#  Sistema Operativo
+# ══════════════════════════════════════════
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ══════════════════════════════════════════
+#  Docker
+# ══════════════════════════════════════════
+# Volúmenes de datos (no se suben datos de BD)
+mysql_data/
+
+# ══════════════════════════════════════════
+#  Logs y temporales
+# ══════════════════════════════════════════
+*.log
+*.tmp
+*.swp
+*.bak

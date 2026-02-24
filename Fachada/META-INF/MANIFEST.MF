@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: Inicio.InicioFacade
-Implementation-Title: SistemaClientes-Facade
-Implementation-Version: 1.0.0
-Implementation-Vendor: Mi Empresa
-Class-Path: .
-

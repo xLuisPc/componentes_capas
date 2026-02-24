@@ -1,17 +1,19 @@
+version: '3.8'
+
 services:
-  mysql:
+  mysql-ccc:
     image: mysql:8.0
-    container_name: mysql-sistema-clientes
+    container_name: mysql-componentes-capas
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: sistema_clientes
-      MYSQL_USER: app_user
-      MYSQL_PASSWORD: app_password
+      MYSQL_USER: ccc_user
+      MYSQL_PASSWORD: ccc_pass
     ports:
       - "3306:3306"
     volumes:
-      - mysql_data:/var/lib/mysql
-      - ./init-db.sql:/docker-entrypoint-initdb.d/init.sql
+      - mysql_ccc_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
 volumes:
-  mysql_data:
+  mysql_ccc_data:

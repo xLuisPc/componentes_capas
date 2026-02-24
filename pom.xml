@@ -1,71 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.arquitectura</groupId>
-    <artifactId>monolito-capas</artifactId>
+    <groupId>com.componentesconcapas</groupId>
+    <artifactId>ComponentesConCapas-Parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+    <name>ComponentesConCapas - Parent</name>
 
-    <name>Monolito con Capas Logicas</name>
-    <description>Arquitectura monolitica con capas logicas - Componentes</description>
+    <modules>
+        <module>DTO</module>
+        <module>FabricaObjetos</module>
+        <module>Aplicaciones</module>
+        <module>CapaMediana</module>
+        <module>Presentacion</module>
+        <module>Inicio</module>
+        <module>Ejecutable</module>
+    </modules>
 
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <!-- Orden de compilacion segun dependencias -->
-    <modules>
-        <module>modulo-dto</module>
-        <module>modulo-fabrica</module>
-        <module>modulo-persistencia</module>
-        <module>modulo-negocio</module>
-        <module>modulo-presentacion</module>
-        <module>modulo-inicio</module>
-    </modules>
-
-    <!-- Dependencias comunes a todos los modulos -->
     <dependencyManagement>
         <dependencies>
-            <!-- Modulos internos -->
+            <!-- Módulos internos -->
             <dependency>
-                <groupId>com.arquitectura</groupId>
-                <artifactId>modulo-dto</artifactId>
-                <version>${project.version}</version>
+                <groupId>com.componentesconcapas</groupId>
+                <artifactId>DTO</artifactId>
+                <version>1.0-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.arquitectura</groupId>
-                <artifactId>modulo-fabrica</artifactId>
-                <version>${project.version}</version>
+                <groupId>com.componentesconcapas</groupId>
+                <artifactId>FabricaObjetos</artifactId>
+                <version>1.0-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.arquitectura</groupId>
-                <artifactId>modulo-persistencia</artifactId>
-                <version>${project.version}</version>
+                <groupId>com.componentesconcapas</groupId>
+                <artifactId>Aplicaciones</artifactId>
+                <version>1.0-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.arquitectura</groupId>
-                <artifactId>modulo-negocio</artifactId>
-                <version>${project.version}</version>
+                <groupId>com.componentesconcapas</groupId>
+                <artifactId>CapaMediana</artifactId>
+                <version>1.0-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.arquitectura</groupId>
-                <artifactId>modulo-presentacion</artifactId>
-                <version>${project.version}</version>
+                <groupId>com.componentesconcapas</groupId>
+                <artifactId>Presentacion</artifactId>
+                <version>1.0-SNAPSHOT</version>
             </dependency>
-
-            <!-- Driver MySQL -->
             <dependency>
-                <groupId>com.mysql</groupId>
-                <artifactId>mysql-connector-j</artifactId>
-                <version>8.3.0</version>
+                <groupId>com.componentesconcapas</groupId>
+                <artifactId>Inicio</artifactId>
+                <version>1.0-SNAPSHOT</version>
             </dependency>
 
-            <!-- Base de datos embebida H2 -->
+            <!-- MySQL Connector -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.33</version>
+            </dependency>
+
+            <!-- H2 Database -->
             <dependency>
                 <groupId>com.h2database</groupId>
                 <artifactId>h2</artifactId>
@@ -73,19 +76,4 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.12.1</version>
-                <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>
