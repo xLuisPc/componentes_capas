@@ -1,9 +1,16 @@
 -- ══════════════════════════════════════════
+--  Crear usuario ccc_user si no existe
+-- ══════════════════════════════════════════
+CREATE USER IF NOT EXISTS 'ccc_user'@'%' IDENTIFIED BY 'ccc_pass';
+CREATE USER IF NOT EXISTS 'ccc_user'@'localhost' IDENTIFIED BY 'ccc_pass';
+
+-- ══════════════════════════════════════════
 --  Base de datos: SistemaClientes
 -- ══════════════════════════════════════════
 CREATE DATABASE IF NOT EXISTS db_clientes;
 
 GRANT ALL PRIVILEGES ON db_clientes.* TO 'ccc_user'@'%';
+GRANT ALL PRIVILEGES ON db_clientes.* TO 'ccc_user'@'localhost';
 
 USE db_clientes;
 
@@ -28,6 +35,7 @@ INSERT INTO personas (identificacion, nombres, apellidos, edad) VALUES
 CREATE DATABASE IF NOT EXISTS db_inventario;
 
 GRANT ALL PRIVILEGES ON db_inventario.* TO 'ccc_user'@'%';
+GRANT ALL PRIVILEGES ON db_inventario.* TO 'ccc_user'@'localhost';
 
 USE db_inventario;
 
@@ -44,5 +52,12 @@ INSERT INTO productos (nombre, precio, cantidad) VALUES
 ('Teclado Mecanico',    85.00, 30),
 ('Monitor 24 pulgadas', 350.00, 15),
 ('Auriculares USB',     45.99, 25);
+
+-- ══════════════════════════════════════════
+--  Permisos administrativos para ccc_user
+-- ══════════════════════════════════════════
+-- Otorga permisos de administrador para crear nuevas bases de datos
+GRANT ALL PRIVILEGES ON *.* TO 'ccc_user'@'%' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'ccc_user'@'localhost' WITH GRANT OPTION;
 
 FLUSH PRIVILEGES;

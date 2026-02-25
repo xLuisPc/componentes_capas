@@ -12,7 +12,7 @@ import java.util.List;
  * Patrón Singleton: una única conexión compartida.
  *
  * Conexión al contenedor Docker:
- *   URL:      jdbc:mysql://localhost:3306/db_clientes
+ *   URL:      jdbc:mysql://localhost:3307/db_clientes
  *   Usuario:  ccc_user
  *   Password: ccc_pass
  */
@@ -20,7 +20,7 @@ public class PersonaDAOImpl implements PersonaDAO {
 
     private static PersonaDAOImpl instancia;
 
-    private static final String URL      = "jdbc:mysql://localhost:3306/db_clientes?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
+    private static final String URL      = "jdbc:mysql://localhost:3307/db_clientes?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
     private static final String USUARIO  = "ccc_user";
     private static final String PASSWORD = "ccc_pass";
 

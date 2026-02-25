@@ -13,7 +13,7 @@ import java.util.List;
  * Patrón Singleton.
  *
  * Conexión al contenedor Docker:
- *   URL:      jdbc:mysql://localhost:3306/db_inventario
+ *   URL:      jdbc:mysql://localhost:3307/db_inventario
  *   Usuario:  ccc_user
  *   Password: ccc_pass
  */
@@ -21,7 +21,7 @@ public class ProductoDAOImpl {
 
     private static ProductoDAOImpl instancia;
 
-    private static final String URL      = "jdbc:mysql://localhost:3306/db_inventario?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
+    private static final String URL      = "jdbc:mysql://localhost:3307/db_inventario?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
     private static final String USUARIO  = "ccc_user";
     private static final String PASSWORD = "ccc_pass";
 

@@ -22,6 +22,12 @@ public class DocumentoDAOImpl implements DocumentoDAO {
     private static final String PASSWORD = "";
 
     private DocumentoDAOImpl() {
+        // Cargar el driver H2 explícitamente
+        try {
+            Class.forName("org.h2.Driver");
+        } catch (ClassNotFoundException e) {
+            System.err.println("Error: No se puede cargar el driver H2: " + e.getMessage());
+        }
         inicializarTabla();
     }
 

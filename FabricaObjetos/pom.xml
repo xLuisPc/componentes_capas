@@ -19,5 +19,9 @@
             <groupId>com.componentesconcapas</groupId>
             <artifactId>DTO</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.componentesconcapas</groupId>
+            <artifactId>CapaMediana</artifactId>
+        </dependency>
     </dependencies>
 </project>
