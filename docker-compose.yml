@@ -10,7 +10,7 @@ services:
       MYSQL_USER: ccc_user
       MYSQL_PASSWORD: ccc_pass
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - mysql_ccc_data:/var/lib/mysql
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
