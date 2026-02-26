@@ -47,7 +47,6 @@ public class InicioAplicacion {
         System.out.print("Opción: ");
 
         String opcion = scanner.nextLine().trim();
-        scanner.close();
 
         // ── PASO 1: Crear el Controlador (CapaMediana) vía fábrica ─────
         // La fábrica se encarga de inyectar sus dependencias internas.
